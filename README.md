@@ -96,8 +96,8 @@ $$
 
 $$
 q_{\mathrm{RLCS}}=
-\min\left\{\xi(C,t),S-\omega_1\phi_{\mathrm{IP}}
--\gamma\frac{\phi_{\mathrm{life}}}{1+\phi_{\mathrm{IP}}}\right\}.
+\min\{\xi(C,t),S-\omega_1\phi_{\mathrm{IP}}
+-\gamma\frac{\phi_{\mathrm{life}}}{1+\phi_{\mathrm{IP}}}\}.
 $$
 
 EABS uses three parameters to distinguish inventory about to expire; RLCS uses four parameters to combine a remaining-life summary with a cap.
