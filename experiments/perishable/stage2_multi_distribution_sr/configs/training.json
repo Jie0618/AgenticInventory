@@ -1,0 +1,11 @@
+{
+  "score": {
+    "mean_weight": 0.6,
+    "mean_top_k_weight": 0.4,
+    "cvar_alpha": 0.8
+  },
+  "constant_fitting": "independent_per_case",
+  "optimizer_mode": "standard",
+  "max_pair_retries": 5,
+  "training_environments": "../../configs/training_environments.json"
+}

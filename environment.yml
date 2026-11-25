@@ -1,0 +1,15 @@
+name: agentic_inv
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - "libblas=*=*openblas"
+  - pip:
+      - matplotlib
+      - psutil
+      - threadpoolctl
+      - pytest

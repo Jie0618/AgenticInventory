@@ -1,0 +1,53 @@
+{
+  "reference_baselines": ["constant_order", "base_stock", "s_s", "copsq", "capped_base_stock", "bsp_low", "weighted_base_stock", "s_s_qmin_qmax"],
+  "schema_version": 2,
+  "setting": "lead_time_perishable",
+  "training_contexts": [
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      3,
+      5
+    ]
+  ],
+  "state_action_cap": 20,
+  "horizon": 1000,
+  "proposal_paths": 128,
+  "strict_paths": 1000,
+  "evaluation_paths": 8000,
+  "fast_proposal_budget": 512,
+  "reference": "best_formula_baseline_empirical_mc_shared_final_bank",
+  "optimizer": "two_fidelity_composed_mc",
+  "cyclic_cap_enabled": true,
+  "score_protocol": "mean-cvar80-60-40",
+  "llm_template_init": true,
+  "stage2_seed_selection": "dual-frontier-union",
+  "llm_template_init_count_per_seed": 6,
+  "llm_template_init_min_per_seed": 5,
+  "evaluation_hard_timeout_seconds": 2400,
+  "scheduling": {
+    "async_evaluation": true,
+    "iteration_wait_seconds": 300,
+    "max_pending_families": 20
+  },
+  "certify_proposal_paths": 512,
+  "certify_strict_paths": 8000
+}

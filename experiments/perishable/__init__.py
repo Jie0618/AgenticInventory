@@ -1,0 +1,1 @@
+"""Pure-perishable experiment assets."""

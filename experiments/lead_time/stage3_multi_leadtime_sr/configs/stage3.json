@@ -1,0 +1,42 @@
+{
+  "reference_baselines": ["constant_order", "base_stock", "capped_base_stock", "vector_base_stock", "tilted_cbs", "tilted_pic", "weighted_tilted_pic", "myopic", "myopic2", "pil", "fp3", "dual_balancing"],
+  "schema_version": 1,
+  "cyclic_cap_enabled": true,
+  "workers": 80,
+  "horizon": 1000,
+  "tuning_paths": 1000,
+  "evaluation_paths": 8000,
+  "proposal_paths": 128,
+  "proposal_budget": null,
+  "state_caps": {
+    "2": 22,
+    "3": 22,
+    "4": 22,
+    "5": 22,
+    "6": 22,
+    "7": 22,
+    "8": 22,
+    "9": 22,
+    "10": 22
+  },
+  "candidate_batch_size": 64,
+  "max_retries": 2,
+  "retry_cooldown_seconds": 10,
+  "memory_safety_reserve_gb": 100,
+  "estimated_task_memory_gb": 1.0,
+  "memory_ewma_alpha": 0.2,
+  "memory_safety_margin": 0.25,
+  "score_protocol": "mean-cvar80-60-40",
+  "llm_template_init": true,
+  "evaluation_hard_timeout_seconds": 2400,
+  "scheduling": {
+    "async_evaluation": true,
+    "iteration_wait_seconds": 300,
+    "max_pending_families": 20
+  },
+  "stage2_seed_selection": "dual-frontier-union",
+  "llm_template_init_count_per_seed": 6,
+  "llm_template_init_min_per_seed": 5,
+  "certify_proposal_paths": 512,
+  "certify_strict_paths": 8000
+}

@@ -1,0 +1,9 @@
+{
+  "iterations": 100,
+  "island_count": 6,
+  "optimizer_workers": 60,
+  "iteration_wait_seconds": 300,
+  "cyclic_cap": true,
+  "max_parameters": 8,
+  "reflection_iteration_interval": 5
+}

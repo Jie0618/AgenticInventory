@@ -1,0 +1,5 @@
+{
+  "name": "l3_ten_case_single_distribution_sr",
+  "workers": 60,
+  "training_environments": "../../configs/training_environments.json"
+}

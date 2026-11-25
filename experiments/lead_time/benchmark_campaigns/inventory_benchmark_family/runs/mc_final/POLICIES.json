@@ -1,0 +1,774 @@
+{
+  "policy_set": "lead_time_mc_final",
+  "policies": [
+    {
+      "id": "co",
+      "type": "registered_baseline",
+      "name": "co"
+    },
+    {
+      "id": "base_stock",
+      "type": "registered_baseline",
+      "name": "base_stock"
+    },
+    {
+      "id": "cbs",
+      "type": "registered_baseline",
+      "name": "cbs"
+    },
+    {
+      "id": "tilted_pic",
+      "type": "registered_baseline",
+      "name": "tilted_pic"
+    },
+    {
+      "id": "weighted_tilted_pic",
+      "type": "registered_baseline",
+      "name": "weighted_tilted_pic"
+    },
+    {
+      "id": "myopic2",
+      "type": "computational_baseline",
+      "name": "myopic2"
+    },
+    {
+      "id": "pil",
+      "type": "computational_baseline",
+      "name": "pil"
+    },
+    {
+      "id": "sr_06287da8f86bf0bfa6ac4d845acf1ca556949fa8bbc01ad0753711dc4438125e",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "args": [
+            {
+              "name": "S",
+              "op": "parameter"
+            },
+            {
+              "arg": {
+                "name": "cumulative_inventory_2",
+                "op": "motif"
+              },
+              "op": "neg"
+            }
+          ],
+          "op": "add"
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "cap",
+            "lower": 0.0,
+            "name": "C",
+            "upper": 22.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F06"
+    },
+    {
+      "id": "sr_117cecff251532c4efca37a4c63aac045389296e3edf268e6145ef8c1ef317ab",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "left": {
+            "name": "S",
+            "op": "parameter"
+          },
+          "op": "sub",
+          "right": {
+            "name": "available_inventory",
+            "op": "motif"
+          }
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "cap",
+            "lower": 0.0,
+            "name": "C",
+            "upper": 22.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F05"
+    },
+    {
+      "id": "sr_1b70d1efa428ce820eb22e5a10f3dd253433afae3c8dccf0f3bfe4fb13bae063",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "left": {
+            "name": "S",
+            "op": "parameter"
+          },
+          "op": "sub",
+          "right": {
+            "name": "inventory_position",
+            "op": "motif"
+          }
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "cap",
+            "lower": 0.0,
+            "name": "C",
+            "upper": 22.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F08"
+    },
+    {
+      "id": "sr_1ee08772784372c9d39d916066036a4fdf6184d3f2a8b3e70171b555b506f04a",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "name": "r",
+          "op": "parameter"
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "name": "C",
+            "kind": "cap",
+            "lower": 0.0,
+            "upper": 20.0
+          },
+          {
+            "name": "r",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 20.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F03"
+    },
+    {
+      "id": "sr_90c2c2d611552c3787fd10a56f36a9a7018806abceb21e0978c8924ed8421321",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "args": [
+            {
+              "name": "S",
+              "op": "parameter"
+            },
+            {
+              "op": "neg",
+              "arg": {
+                "op": "motif",
+                "name": "total_inventory"
+              }
+            }
+          ],
+          "op": "add"
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "name": "C",
+            "kind": "cap",
+            "lower": 0.0,
+            "upper": 20.0
+          },
+          {
+            "name": "S",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 220.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F04"
+    },
+    {
+      "id": "sr_a38210272d4c4f99badd3fe6752dac1fa4e74b32395e9804815878feef3801c0",
+      "type": "formula_ast",
+      "ast": {
+        "arg": {
+          "left": {
+            "name": "S",
+            "op": "parameter"
+          },
+          "op": "sub",
+          "right": {
+            "args": [
+              {
+                "name": "total_inventory",
+                "op": "motif"
+              },
+              {
+                "name": "head_sum_ceil_l_div_2",
+                "op": "feature"
+              }
+            ],
+            "op": "add"
+          }
+        },
+        "limit": {
+          "name": "C",
+          "op": "parameter"
+        },
+        "mode": "cyclic_integer",
+        "op": "cap"
+      },
+      "motifs": {},
+      "family": {
+        "features": [
+          {
+            "kind": "head_sum",
+            "name": "head_sum_ceil_l_div_2",
+            "weight_rule": null,
+            "weights": [],
+            "window": "ceil(L/2)"
+          }
+        ],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "cap",
+            "lower": 0.0,
+            "name": "C",
+            "upper": 22.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F07"
+    },
+    {
+      "id": "sr_d5a758e4ad6e4a9ad6845856fb4d715ac76a4e4e687d36120cd3543ddbeaf26c",
+      "type": "formula_ast",
+      "ast": {
+        "left": {
+          "arg": {
+            "args": [
+              {
+                "args": [
+                  {
+                    "name": "S",
+                    "op": "parameter"
+                  },
+                  {
+                    "arg": {
+                      "name": "inventory_position",
+                      "op": "motif"
+                    },
+                    "op": "neg"
+                  }
+                ],
+                "op": "add"
+              },
+              {
+                "name": "K",
+                "op": "parameter"
+              }
+            ],
+            "op": "mul"
+          },
+          "limit": {
+            "name": "C",
+            "op": "parameter"
+          },
+          "mode": "cyclic_integer",
+          "op": "cap"
+        },
+        "op": "minimum",
+        "right": {
+          "args": [
+            {
+              "name": "S1",
+              "op": "parameter"
+            },
+            {
+              "arg": {
+                "name": "tail_sum_ceil_l_div_5",
+                "op": "feature"
+              },
+              "op": "neg"
+            }
+          ],
+          "op": "add"
+        }
+      },
+      "motifs": {},
+      "family": {
+        "features": [
+          {
+            "kind": "tail_sum",
+            "name": "tail_sum_ceil_l_div_5",
+            "weight_rule": null,
+            "weights": [],
+            "window": "ceil(L/5)"
+          }
+        ],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "cap",
+            "lower": 0.0,
+            "name": "C",
+            "upper": 22.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S1",
+            "upper": 242.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "scale",
+            "lower": 0.0,
+            "name": "K",
+            "upper": 1.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier"
+      ],
+      "display_name": "F10"
+    },
+    {
+      "id": "sr_d642923444fb382dbe73ae8dd6b1f2f019a9bfbb06977e1c0791d7c0fe765803",
+      "type": "formula_ast",
+      "ast": {
+        "name": "p_zero",
+        "op": "distribution"
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": []
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "frontier",
+        "parameter_frontier"
+      ],
+      "display_name": "F01"
+    },
+    {
+      "id": "sr_fb4cc2ebd49b1955074c0399160d0297e84626419dbd922212cac9f274d39be8",
+      "type": "formula_ast",
+      "ast": {
+        "left": {
+          "args": [
+            {
+              "args": [
+                {
+                  "name": "S",
+                  "op": "parameter"
+                },
+                {
+                  "arg": {
+                    "name": "tail_linear_half_normalized",
+                    "op": "feature"
+                  },
+                  "op": "neg"
+                }
+              ],
+              "op": "add"
+            },
+            {
+              "name": "K",
+              "op": "parameter"
+            }
+          ],
+          "op": "mul"
+        },
+        "op": "minimum",
+        "right": {
+          "args": [
+            {
+              "name": "S",
+              "op": "parameter"
+            },
+            {
+              "arg": {
+                "name": "inventory_position",
+                "op": "motif"
+              },
+              "op": "neg"
+            },
+            {
+              "name": "demand_mean",
+              "op": "motif"
+            }
+          ],
+          "op": "add"
+        }
+      },
+      "motifs": {},
+      "family": {
+        "features": [
+          {
+            "kind": "tail_weighted",
+            "name": "tail_linear_half_normalized",
+            "weight_rule": "linear_desc_normalized",
+            "weights": [],
+            "window": "floor(L/2)"
+          }
+        ],
+        "parameters": [
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "target",
+            "lower": 0.0,
+            "name": "S",
+            "upper": 242.0
+          },
+          {
+            "context_dependence": "independent_per_case",
+            "index_rule": "scalar",
+            "kind": "scale",
+            "lower": 0.0,
+            "name": "K",
+            "upper": 1.0
+          }
+        ]
+      },
+      "role": "stage3_frontier",
+      "frontiers": [
+        "parameter_frontier"
+      ],
+      "display_name": "F13"
+    },
+    {
+      "id": "SCDS",
+      "type": "formula_ast",
+      "ast": {
+        "op": "cap",
+        "mode": "cyclic_integer",
+        "arg": {
+          "op": "mul",
+          "args": [
+            {
+              "op": "parameter",
+              "name": "K"
+            },
+            {
+              "op": "minimum",
+              "left": {
+                "op": "sub",
+                "left": {
+                  "op": "parameter",
+                  "name": "S"
+                },
+                "right": {
+                  "op": "motif",
+                  "name": "inventory_position"
+                }
+              },
+              "right": {
+                "op": "sub",
+                "left": {
+                  "op": "parameter",
+                  "name": "F"
+                },
+                "right": {
+                  "op": "motif",
+                  "name": "far_pipeline"
+                }
+              }
+            }
+          ]
+        },
+        "limit": {
+          "op": "parameter",
+          "name": "C"
+        }
+      },
+      "motifs": {},
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "name": "S",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 320.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "F",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 320.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "K",
+            "kind": "scale",
+            "lower": 0.0,
+            "upper": 1.5,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "C",
+            "kind": "cap",
+            "lower": 0.0,
+            "upper": 20.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          }
+        ]
+      },
+      "role": "strict_scds",
+      "frontiers": [],
+      "display_name": "SCDS"
+    },
+    {
+      "id": "aips_hybrid",
+      "type": "registered_baseline",
+      "name": "aips_hybrid"
+    },
+    {
+      "id": "llm_or_projected_mv_capped",
+      "type": "computational_baseline",
+      "name": "llm_or_projected_mv_capped"
+    },
+    {
+      "id": "IA-SCDS",
+      "type": "formula_ast",
+      "ast": {
+        "op": "cap",
+        "mode": "cyclic_integer",
+        "arg": {
+          "op": "mul",
+          "args": [
+            {
+              "op": "parameter",
+              "name": "K"
+            },
+            {
+              "op": "minimum",
+              "left": {
+                "op": "sub",
+                "left": {
+                  "op": "parameter",
+                  "name": "S"
+                },
+                "right": {
+                  "op": "motif",
+                  "name": "inventory_position"
+                }
+              },
+              "right": {
+                "op": "sub",
+                "left": {
+                  "op": "parameter",
+                  "name": "F"
+                },
+                "right": {
+                  "op": "motif",
+                  "name": "init_tail_linear_half"
+                }
+              }
+            }
+          ]
+        },
+        "limit": {
+          "op": "parameter",
+          "name": "C"
+        }
+      },
+      "display_name": "IA-SCDS",
+      "role": "selected_policy",
+      "family": {
+        "features": [],
+        "parameters": [
+          {
+            "name": "S",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 320.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "F",
+            "kind": "target",
+            "lower": 0.0,
+            "upper": 320.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "K",
+            "kind": "scale",
+            "lower": 0.0,
+            "upper": 1.5,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          },
+          {
+            "name": "C",
+            "kind": "cap",
+            "lower": 0.0,
+            "upper": 20.0,
+            "index_rule": "scalar",
+            "context_dependence": "independent_per_case"
+          }
+        ]
+      }
+    },
+    {
+      "id": "codex-astra-capped-survival",
+      "type": "registered_baseline",
+      "name": "codex",
+      "display_name": "codex (gpt-6-astra)",
+      "method_class": "SOF",
+      "source": "AI-generated Codex baseline",
+      "external": true,
+      "formula_before_action_projection": "min(c,a-I-(1-b)*P)",
+      "parameter_domains": {
+        "a": {
+          "lower": 0,
+          "upper_rule": "min(500,200+mu*(L+1))",
+          "kind": "continuous"
+        },
+        "b": {
+          "lower": -1.5,
+          "upper": 1.5,
+          "kind": "continuous"
+        },
+        "c": {
+          "lower": 0,
+          "upper": 80,
+          "kind": "continuous"
+        }
+      }
+    }
+  ]
+}

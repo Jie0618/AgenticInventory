@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "benchmark_family": "inventory_benchmark_family",
+  "suite_id": "inventory_benchmark_family__lead_time_perishable",
+  "setting": "lead_time_perishable",
+  "demand_catalog_count": 50,
+  "transition_version": "inventory_transition",
+  "contexts": [
+    {
+      "context_id": "L2_M2",
+      "lead_time": 2,
+      "shelf_life": 2,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L3_M3",
+      "lead_time": 3,
+      "shelf_life": 3,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L1_M4",
+      "lead_time": 1,
+      "shelf_life": 4,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L4_M1",
+      "lead_time": 4,
+      "shelf_life": 1,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L5_M3",
+      "lead_time": 5,
+      "shelf_life": 3,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L3_M5",
+      "lead_time": 3,
+      "shelf_life": 5,
+      "backlog_patience": 0
+    }
+  ],
+  "context_count": 6,
+  "economic_profiles": [
+    {
+      "profile_id": "bh1p0__wh0p25",
+      "shortage_over_holding": 1.0,
+      "expiry_over_holding": 0.25,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh1p0__wh16p0",
+      "shortage_over_holding": 1.0,
+      "expiry_over_holding": 16.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh3p0__wh1p0",
+      "shortage_over_holding": 3.0,
+      "expiry_over_holding": 1.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh3p0__wh4p0",
+      "shortage_over_holding": 3.0,
+      "expiry_over_holding": 4.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh9p0__wh0p25",
+      "shortage_over_holding": 9.0,
+      "expiry_over_holding": 0.25,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh9p0__wh16p0",
+      "shortage_over_holding": 9.0,
+      "expiry_over_holding": 16.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh20p0__wh1p0",
+      "shortage_over_holding": 20.0,
+      "expiry_over_holding": 1.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh20p0__wh4p0",
+      "shortage_over_holding": 20.0,
+      "expiry_over_holding": 4.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    }
+  ],
+  "economic_profile_count": 8,
+  "case_count": 2400,
+  "holding_cost": 1.0,
+  "default_state_caps": null,
+  "cost_fields": [
+    "holding",
+    "shortage",
+    "expiry"
+  ]
+}

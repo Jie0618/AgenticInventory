@@ -1,0 +1,11 @@
+{
+  "base_url": "https://your-api-endpoint.example/v1",
+  "api_key": "YOUR_API_KEY",
+  "model": "YOUR_MODEL_NAME",
+  "temperature": 0.7,
+  "timeout_seconds": 300,
+  "max_retries": 50,
+  "response_format_json": true,
+  "stream": true,
+  "retry_window_seconds": 3600
+}

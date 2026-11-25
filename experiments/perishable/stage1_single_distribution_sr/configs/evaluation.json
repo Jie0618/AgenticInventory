@@ -1,0 +1,11 @@
+{
+  "proposal_paths": 128,
+  "strict_paths": 1000,
+  "evaluation_paths": 8000,
+  "screen_parameter_points": 24,
+  "screen_paths": 32,
+  "screen_horizon": 128,
+  "score_protocol": "mean-cvar80-60-40",
+  "certify_proposal_paths": 512,
+  "certify_strict_paths": 8000
+}

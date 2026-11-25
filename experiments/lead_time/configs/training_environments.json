@@ -1,0 +1,1114 @@
+{
+  "schema_version": 1,
+  "setting": "lead_time",
+  "environments": [
+    {
+      "case_name": "L3_bimodal0_4_equal_b3",
+      "kind": "bimodal_attack",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 3.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "bimodal_0_4_equal_b3",
+        "values": [
+          0,
+          4
+        ],
+        "probs": [
+          0.5,
+          0.5
+        ],
+        "params": {}
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_poisson0p75_h1_b3",
+      "kind": "poisson",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 3.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "poisson",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        "probs": [
+          0.4723665527410147,
+          0.354274914555761,
+          0.13285309295841036,
+          0.03321327323960259,
+          0.0062274887324254855,
+          0.0009341233098638229,
+          0.00011676541373297786,
+          1.2510580042819058e-05,
+          1.1728668790142865e-06,
+          9.773890658452387e-08,
+          7.3304179938392905e-09,
+          4.998012268526789e-10,
+          3.123757667829243e-11,
+          1.8021678852861018e-12,
+          9.654470814032688e-14,
+          4.827235407016344e-15,
+          2.262766597038911e-16,
+          9.982793810465785e-18,
+          4.15949742102741e-19,
+          1.641906876721346e-20,
+          6.157150787705047e-22,
+          2.198982424180374e-23,
+          7.496530991524002e-25,
+          2.4445209754969573e-26,
+          7.6391280484279915e-28,
+          2.2917384145283975e-29,
+          6.610783888062685e-31,
+          1.8363288577951902e-32,
+          4.918738011951402e-34,
+          1.272087416883983e-35,
+          3.180218542209958e-37,
+          7.694077118249897e-39,
+          1.8032993245898197e-40,
+          4.098407555885954e-42,
+          9.040604902689606e-44,
+          1.937272479147773e-45,
+          4.0359843315578604e-47,
+          8.181049320725394e-49,
+          1.614680786985275e-50,
+          3.1051553595870672e-52,
+          5.822166299225751e-54,
+          1.0650304205900764e-55,
+          1.9018400367679936e-57,
+          3.3171628548278956e-59,
+          5.654254866183913e-61,
+          9.423758110306521e-63,
+          1.5364823005934542e-64,
+          2.45183345839381e-66,
+          3.8309897787403285e-68,
+          5.86375986541887e-70,
+          2.220446049250313e-16
+        ],
+        "params": {
+          "lam": 0.75,
+          "d_max": 50.0
+        }
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_poisson4_h2_b6",
+      "kind": "poisson",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 2.0,
+        "shortage": 6.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "poisson",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        "probs": [
+          0.01831563888873418,
+          0.07326255555493671,
+          0.14652511110987343,
+          0.19536681481316456,
+          0.19536681481316456,
+          0.15629345185053165,
+          0.10419563456702109,
+          0.05954036260972634,
+          0.02977018130486317,
+          0.013231191691050297,
+          0.005292476676420119,
+          0.0019245369732436796,
+          0.0006415123244145599,
+          0.00019738840751217228,
+          5.639668786062065e-05,
+          1.5039116762832174e-05,
+          3.7597791907080434e-06,
+          8.84653927225422e-07,
+          1.9658976160564933e-07,
+          4.138731823276828e-08,
+          8.277463646553656e-09,
+          1.5766597422006963e-09,
+          2.866654076728539e-10,
+          4.9854853508322414e-11,
+          8.30914225138707e-12,
+          1.3294627602219311e-12,
+          2.0453273234183554e-13,
+          3.0301145532123785e-14,
+          4.328735076017684e-15,
+          5.970669070369219e-16,
+          7.960892093825626e-17,
+          1.0272118830742743e-17,
+          1.2840148538428429e-18,
+          1.5563816410216277e-19,
+          1.8310372247313267e-20,
+          2.0926139711215163e-21,
+          2.3251266345794627e-22,
+          2.5136504157615812e-23,
+          2.6459478060648223e-24,
+          2.713792621604946e-25,
+          2.713792621604946e-26,
+          2.647602557663362e-27,
+          2.5215262453936782e-28,
+          2.345605809668538e-29,
+          2.132368917880489e-30,
+          1.8954390381159904e-31,
+          1.648207859231296e-32,
+          1.4027300929628052e-33,
+          1.168941744135671e-34,
+          9.542381584780989e-36,
+          7.63390526782479e-37
+        ],
+        "params": {
+          "lam": 4.0,
+          "d_max": 50.0
+        }
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_geometric_p0p333_h1_b9",
+      "kind": "heavy_tail",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 9.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "geometric",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        "probs": [
+          0.3333333333333333,
+          0.22222222222222224,
+          0.14814814814814817,
+          0.09876543209876545,
+          0.06584362139917699,
+          0.04389574759945132,
+          0.029263831732967555,
+          0.019509221155311705,
+          0.013006147436874472,
+          0.008670764957916315,
+          0.0057805099719442105,
+          0.003853673314629474,
+          0.0025691155430863167,
+          0.0017127436953908778,
+          0.0011418291302605853,
+          0.0007612194201737237,
+          0.0005074796134491491,
+          0.0003383197422994328,
+          0.00022554649486628857,
+          0.00015036432991085905,
+          0.00010024288660723937,
+          6.682859107149293e-05,
+          4.455239404766196e-05,
+          2.970159603177464e-05,
+          1.98010640211831e-05,
+          1.3200709347455399e-05,
+          8.8004728983036e-06,
+          5.866981932202401e-06,
+          3.911321288134934e-06,
+          2.60754752542329e-06,
+          1.7383650169488602e-06,
+          1.1589100112992403e-06,
+          7.726066741994936e-07,
+          5.150711161329958e-07,
+          3.4338074408866386e-07,
+          2.289204960591093e-07,
+          1.526136640394062e-07,
+          1.0174244269293748e-07,
+          6.7828295128625e-08,
+          4.521886341908333e-08,
+          3.014590894605556e-08,
+          2.009727263070371e-08,
+          1.3398181753802474e-08,
+          8.93212116920165e-09,
+          5.9547474461344336e-09,
+          3.96983163075629e-09,
+          2.6465544205041934e-09,
+          1.7643696136694624e-09,
+          1.1762464091129752e-09,
+          7.841642727419836e-10,
+          1.5683283822018228e-09
+        ],
+        "params": {
+          "p": 0.3333333333333333,
+          "d_max": 50.0
+        }
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_uniform0_4_h1_b4",
+      "kind": "uniform",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 4.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "uniform",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "probs": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ],
+        "params": {
+          "low": 0.0,
+          "high": 4.0
+        }
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_positive_bimodal1_9_equal",
+      "kind": "positive_bimodal",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 2.0,
+        "shortage": 9.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "positive_bimodal_1_9_equal",
+        "values": [
+          1,
+          9
+        ],
+        "probs": [
+          0.5,
+          0.5
+        ],
+        "params": {}
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_trimodal0_4_12_h0.5_b12",
+      "kind": "trimodal",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 0.5,
+        "shortage": 12.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "trimodal_0_4_12",
+        "values": [
+          0,
+          4,
+          12
+        ],
+        "probs": [
+          0.55,
+          0.3,
+          0.15
+        ],
+        "params": {}
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_intermittent0_14_p0p05_h1_b20",
+      "kind": "intermittent_attack",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 20.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "intermittent_0_14_p0p05",
+        "values": [
+          0,
+          14
+        ],
+        "probs": [
+          0.95,
+          0.05
+        ],
+        "params": {}
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_zip_p0p75_lam4_h1_b9",
+      "kind": "zero_inflated",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 9.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "zip_0p75_lam4",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        "probs": [
+          0.7545789097221836,
+          0.01831563888873418,
+          0.03663127777746836,
+          0.04884170370329114,
+          0.04884170370329114,
+          0.03907336296263291,
+          0.026048908641755273,
+          0.014885090652431585,
+          0.007442545326215792,
+          0.003307797922762574,
+          0.0013231191691050297,
+          0.0004811342433109199,
+          0.00016037808110363997,
+          4.934710187804307e-05,
+          1.4099171965155162e-05,
+          3.7597791907080434e-06,
+          9.399447976770109e-07,
+          2.211634818063555e-07,
+          4.914744040141233e-08,
+          1.034682955819207e-08,
+          2.069365911638414e-09,
+          3.941649355501741e-10,
+          7.166635191821347e-11,
+          1.2463713377080604e-11,
+          2.0772855628467674e-12,
+          3.323656900554828e-13,
+          5.1133183085458886e-14,
+          7.575286383030946e-15,
+          1.082183769004421e-15,
+          1.4926672675923048e-16,
+          1.9902230234564064e-17,
+          2.5680297076856858e-18,
+          3.210037134607107e-19,
+          3.8909541025540693e-20,
+          4.577593061828317e-21,
+          5.231534927803791e-22,
+          5.812816586448657e-23,
+          6.284126039403953e-24,
+          6.614869515162056e-25,
+          6.784481554012365e-26,
+          6.784481554012365e-27,
+          6.619006394158405e-28,
+          6.303815613484196e-29,
+          5.864014524171345e-30,
+          5.330922294701223e-31,
+          4.738597595289976e-32,
+          4.12051964807824e-33,
+          3.506825232407013e-34,
+          2.922354360339178e-35,
+          2.3855953961952473e-36,
+          1.9084763169561977e-37
+        ],
+        "params": {
+          "zero_inflation": 0.75,
+          "lam": 4.0,
+          "d_max": 50.0
+        }
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case_name": "L3_trimodal0_2_6_matched_h1_b3",
+      "kind": "matched_moments",
+      "config": {
+        "schema_version": 1,
+        "model_version": "inventory_composition",
+        "lead_time": {
+          "mode": "deterministic",
+          "periods": 3
+        },
+        "perishability": {
+          "mode": "disabled"
+        },
+        "backlog": {
+          "mode": "lost_sales"
+        },
+        "capacity": 22,
+        "transition": {
+          "mode": "deterministic",
+          "event_order": [
+            "observe_state",
+            "choose_action",
+            "sample_order_lead_time",
+            "place_order",
+            "receive_due",
+            "sample_receipt_lifetime",
+            "serve_backlog",
+            "realize_demand",
+            "serve_demand",
+            "measure_holding_and_shortage",
+            "expire_inventory",
+            "age_inventory",
+            "abandon_backlog",
+            "age_backlog",
+            "advance_pipeline",
+            "project_finite_grid",
+            "measure_exit_and_carry_costs"
+          ],
+          "version": "inventory_transition"
+        }
+      },
+      "costs": {
+        "holding": 1.0,
+        "shortage": 3.0,
+        "expiry": 0.0,
+        "backlog": 0.0,
+        "abandonment": 0.0,
+        "ordering": 0.0
+      },
+      "n": 22,
+      "demand": {
+        "name": "trimodal_0_2_6_matched",
+        "values": [
+          0,
+          2,
+          6
+        ],
+        "probs": [
+          0.3333333333333333,
+          0.5,
+          0.16666666666666666
+        ],
+        "params": {}
+      },
+      "initial_state": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

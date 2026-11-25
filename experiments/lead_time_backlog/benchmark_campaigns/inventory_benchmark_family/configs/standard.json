@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "contexts": [[3, 3], [5, 3], [10, 3], [3, 5], [5, 5], [10, 5], [3, 10], [5, 10], [10, 10]],
+  "shortage_over_holding": [1, 20],
+  "backlog_over_shortage": [0.05, 0.25],
+  "abandonment_over_shortage": [0.25, 1],
+  "state_action_cap": 20,
+  "horizon": 1000,
+  "fidelity": "certify",
+  "proposal_budget": null,
+  "proposal_paths": 128,
+  "tuning_paths": 1000,
+  "evaluation_paths": 8000,
+  "candidate_batch_size": 64,
+  "myopic_inner_paths": 64,
+  "myopic_path_batch_size": 256,
+  "myopic_action_batch_size": 21,
+  "seed": 20261020,
+  "workers": 60,
+  "task_timeout_seconds": 18000,
+  "task_memory_gb": 4
+}

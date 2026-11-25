@@ -1,0 +1,31 @@
+{
+  "case_count": 3600,
+  "measurement_count": 61169,
+  "policy_count": 17,
+  "reference": {
+    "description": "Per-case minimum evaluation cost across all retained formally evaluated policies. Temporary experiments and unselected fitting candidates are excluded.",
+    "reference_rule": "per_case_minimum_of_all_successful_formal_measurements",
+    "reference_policy_ids": [
+      "apil",
+      "base_stock",
+      "bsp_2d",
+      "bsp_low",
+      "bsp_low_ew",
+      "bsp_oir",
+      "bsp_ws3",
+      "capped_base_stock",
+      "codex-astra-capped-survival",
+      "constant_order",
+      "copsq",
+      "ETIS",
+      "SCBS",
+      "ewa",
+      "pil",
+      "sqmax_ew",
+      "weighted_base_stock"
+    ]
+  },
+  "fitness": "0.60 mean + 0.40 CVaR80 (fractional boundary mass), first within configurations then equally across shared configurations; measured cases per method, without missing-value imputation",
+  "configuration_table": "SUMMARY.csv",
+  "aggregate_table": "OVERALL.csv"
+}

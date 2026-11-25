@@ -1,0 +1,5 @@
+{
+  "name": "m3_n22_stationary_headroom_ten_case_single_distribution_sr",
+  "workers": 60,
+  "training_environments": "../../configs/training_environments.json"
+}

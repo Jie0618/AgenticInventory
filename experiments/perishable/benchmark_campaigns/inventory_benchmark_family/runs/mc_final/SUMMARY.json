@@ -1,0 +1,12 @@
+{
+  "case_count": 5600,
+  "measurement_count": 111999,
+  "policy_count": 20,
+  "reference": {
+    "description": "Per-case minimum evaluation cost across the formal evaluation pool. Reference costs are fixed before score aggregation.",
+    "reference_rule": "per_case_minimum_of_all_successful_formal_measurements"
+  },
+  "fitness": "0.60 mean + 0.40 CVaR80 (fractional boundary mass), first within configurations then equally across shared configurations; measured cases per method, without missing-value imputation",
+  "configuration_table": "SUMMARY.csv",
+  "aggregate_table": "OVERALL.csv"
+}

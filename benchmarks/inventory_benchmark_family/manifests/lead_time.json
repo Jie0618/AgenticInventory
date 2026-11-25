@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "benchmark_family": "inventory_benchmark_family",
+  "suite_id": "inventory_benchmark_family__lead_time",
+  "setting": "lead_time",
+  "demand_catalog_count": 50,
+  "transition_version": "inventory_transition",
+  "contexts": [
+    {
+      "context_id": "L1",
+      "lead_time": 1,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L2",
+      "lead_time": 2,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L3",
+      "lead_time": 3,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L4",
+      "lead_time": 4,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L5",
+      "lead_time": 5,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L6",
+      "lead_time": 6,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L7",
+      "lead_time": 7,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    },
+    {
+      "context_id": "L8",
+      "lead_time": 8,
+      "shelf_life": 0,
+      "backlog_patience": 0
+    }
+  ],
+  "context_count": 8,
+  "economic_profiles": [
+    {
+      "profile_id": "bh1p0",
+      "shortage_over_holding": 1.0,
+      "expiry_over_holding": 0.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh3p0",
+      "shortage_over_holding": 3.0,
+      "expiry_over_holding": 0.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh9p0",
+      "shortage_over_holding": 9.0,
+      "expiry_over_holding": 0.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    },
+    {
+      "profile_id": "bh20p0",
+      "shortage_over_holding": 20.0,
+      "expiry_over_holding": 0.0,
+      "backlog_over_shortage": 0.0,
+      "abandonment_over_shortage": 0.0
+    }
+  ],
+  "economic_profile_count": 4,
+  "case_count": 1600,
+  "holding_cost": 1.0,
+  "default_state_caps": {
+    "1": 50,
+    "2": 40,
+    "3": 22,
+    "4": 14,
+    "5": 8,
+    "6": 5,
+    "7": 4,
+    "8": 3
+  },
+  "cost_fields": [
+    "holding",
+    "shortage"
+  ]
+}

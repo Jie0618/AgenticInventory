@@ -1,0 +1,15 @@
+{
+  "reference_baselines": ["constant_order", "gross_base_stock", "net_base_stock", "net_capped_base_stock", "net_s_s", "weighted_backlog_base_stock", "urgency_boosted_base_stock"],
+  "state_action_cap": 20,
+  "horizon": 1000,
+  "proposal_paths": 128,
+  "strict_paths": 1000,
+  "evaluation_paths": 8000,
+  "fast_proposal_budget": 512,
+  "screen_parameter_points": 16,
+  "screen_paths": 16,
+  "screen_horizon": 64,
+  "score_protocol": "mean-cvar80-60-40",
+  "certify_proposal_paths": 512,
+  "certify_strict_paths": 8000
+}
